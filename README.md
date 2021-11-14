@@ -10,4 +10,5 @@ Repository url: <https://github.com/kshoultz/tech-challenge-node-next>
 
 Node.js / Next.js / Material UI Site (Digital Ocean):
 Hosted URL (Digital Ocean): <http://143.198.166.162/>
+Hosted URL (Vercel): <https://tech-challenge-node-next.vercel.app/>
 Repository url: <https://github.com/kshoultz/tech-challenge-laravel>
