@@ -1,28 +1,41 @@
 import Card from './components/Card';
 import {Helmet} from "react-helmet";
-
-const posts = [
-  {
-    id: 1,
-    title: 'test 1',
-    paragraph: 'desc 1',
-    image_url: '/images/Talkie.png'
-  },
-  {
-    id: 1,
-    title: 'test 2',
-    paragraph: 'desc 2',
-    image_url: '/images/Rabbit.png'
-  },
-  {
-    id: 1,
-    title: 'test 3',
-    paragraph: 'desc 3',
-    image_url: '/images/Shield.png'
-  }
-]
+import {useState, useEffect} from 'react';
 
 export default function Home() {
+  const [isLoading, setIsLoading] = useState(true);
+  const [loadedPosts, setLoadedPosts] = useState([]);
+
+  useEffect(() => {
+    setIsLoading(true);
+    fetch (
+        'https://tech-challenge-node-next-eglt2.ondigitalocean.app//posts'
+    )
+      .then((response) => {
+        return response.json();
+      })
+      .then((data) => {
+        const posts = [];
+
+        for (const key in data) {
+          console.log(key);
+          posts.push(key);
+        }
+
+        setIsLoading(false);
+        setLoadedPosts(posts);
+      });
+  }, [ ]);
+
+
+  if (isLoading) {
+    return (
+      <section>
+        <p>Loading...</p>
+      </section>
+    );
+  };
+
   function handleMWIClick(e){
     mwi.generateCandidatesList(); // TODO: This should be done in a React.js way.
   }
