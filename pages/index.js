@@ -18,7 +18,10 @@ export default function Home() {
         const posts = [];
 
         for (const key in data) {
-          console.log(key);
+          const post = {
+            key: key, 
+            ...data[key]
+          };
           posts.push(key);
         }
 
