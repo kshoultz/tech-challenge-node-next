@@ -1,4 +1,5 @@
 import Card from './components/Card';
+import {Helmet} from "react-helmet";
 
 const posts = [
   {
@@ -22,18 +23,26 @@ const posts = [
 ]
 
 export default function Home() {
+  function handleMWIClick(e){
+    mwi.generateCandidatesList(); // TODO: This should be done in a React.js way.
+  }
+
   return (
     <div>
+      <Helmet>
+        <script src="/js/mwi.js" type="text/javascript" />
+      </Helmet>
+      
       <div>
-        <div class="mwi-full-layout">
-            <div class="mwi-full-content"mwi-full-width-content>
+        <div className="mwi-full-layout">
+            <div className="mwi-full-content"mwi-full-width-content>
                 <header>
-                    <img src="images/Logo.png" class="mwi-logo" alt="Midwestern Interactive" />
-                    <div class="mwi-navigation">
+                    <img src="images/Logo.png" className="mwi-logo" alt="Midwestern Interactive" />
+                    <div className="mwi-navigation">
                         <a href="contact">contact</a>
                     </div>
                 </header>
-                <div class="mwi-card-layout">
+                <div className="mwi-card-layout">
                   {
                     posts.map((post) => (
                       <Card 
@@ -46,10 +55,10 @@ export default function Home() {
                     ))
                   }
                 </div>
-                <div class="mwi-copy-section">
-                    <h1><span class="mwi-underline">Heading</span> One</h1>
+                <div className="mwi-copy-section">
+                    <h1><span className="mwi-underline">Heading</span> One</h1>
                         <p>
-                            Remove the duplicates in 2 Javascript objects and output the list of distinct names in an unordered list when <a href="#mwi-bottom" onclick="mwi.generateCandidatesList();">this link</a> is clicked. 
+                            Remove the duplicates in 2 Javascript objects and output the list of distinct names in an unordered list when <a href="#mwi-bottom" onClick={handleMWIClick}>this link</a> is clicked. 
                         </p>
                         <p>
                             If the operation completed already, notify the user that this has already been done.
