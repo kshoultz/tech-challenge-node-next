@@ -1,0 +1,470 @@
+/* Standard elemets: */
+html, body, #__next, .mwi-split-layout { height: 100%; width:100%; }
+html, body, p, div, h1, h2, h3, h4, span, textarea, input {   
+    font-family: 'Poppins', sans-serif;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 30px;
+    margin: 0;
+    padding: 0;
+}
+body { 
+  background-color: #222222; 
+  color: #858585;
+}
+a {
+  color: #DEBF79;
+  text-decoration: none;
+}
+header {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  height: 177px; /* Equalized height for centering logo vertically. */
+  margin-bottom: 12px; /* add extra space for the bottom of the header */
+}
+@media (max-width: 1439px) {
+  header {
+    height:47px;
+    margin:29px 34px 21px 35px;
+  }
+}
+footer {
+  text-align:right;
+}
+/* Standard elemets END  */
+
+/* MWI Logo: */
+.mwi-logo {
+  width: 350px;
+  height: 73px;
+  margin-left: 4px;
+}
+@media (max-width: 1439px) {
+  .mwi-logo {
+    width: 225px;
+    height: 47px;
+    margin-left: 0;
+  }
+}
+/* MWI Logo END. */
+
+/* Layout Definitions: */
+.mwi-full-layout {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.mwi-full-content {
+  padding: 0 94px; 
+  width:100%;
+  max-width: 1260px
+}
+@media (max-width: 1439px) {
+  .mwi-full-content {
+    padding: 0 10px;
+    width: 100%;
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mwi-split-layout {
+    display:flex;
+    flex-direction: row;
+    align-items: stretch;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mwi-split-dark-container {
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-end;
+    width:50%;
+  }
+}
+@media (min-width: 1440px) {
+  .mwi-dark-content
+  {
+    min-width: 487px;
+    max-width: 487px;
+    width: 487px;
+  }
+}
+
+.mwi-split-light-container {
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  background-color:#FFFFFF;
+}
+@media (min-width: 1440px) {
+  .mwi-split-light-container {
+    width:50%;
+  }
+}
+@media (max-width: 1439px) {
+  .mwi-split-light-container {
+    width:100%;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mwi-light-content
+  {
+    min-width: 564px;
+    max-width: 564px;
+    width: 564px;
+  }
+}
+@media (max-width: 1439px) {
+  .mwi-light-content
+   {
+    width:100%;
+    /* max-width: 564px; */
+    /* max-width: 487px; */
+    max-width: 420px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mwi-dark-content {
+    margin-left: 94px;
+    padding-right: 140px;
+    /* border:solid 1px #FF0000; */
+  }
+}
+
+@media (min-width: 1440px) {
+  .mwi-light-content {
+    margin-right: 94px;
+    padding-left: 75px;
+    /* border:solid 1px #0000FF; */
+  }
+}
+@media (max-width: 1439px) {
+  .mwi-light-content {
+    margin: 0 10px;
+  }
+}
+/* Layout Definitions END */
+
+/* Marketing Copy Section */
+.mwi-copy-section {
+  color: #FFFFFF;
+  margin: 0 4px;
+}
+@media (max-width:1439px) 
+{
+  .mwi-copy-section {
+    margin: 0px; 
+    margin: 0 35px 64px 35px;
+    padding: 0px;
+  }
+}
+
+.mwi-copy-section h1, 
+.mwi-copy-section .mwi-underline {
+  font-size: 46px;
+  line-height: 46px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  margin-top: 74px;
+  margin-bottom:43px;
+  color: #FFFFFF;
+}
+@media (max-width:1439px) {
+  .mwi-copy-section h1, 
+  .mwi-copy-section .mwi-underline {
+    margin-top: 36px;
+    margin-bottom: 40px;
+  }
+}
+.mwi-underline {
+  border-bottom: solid 4px #DEBF79;
+  padding: 4px 0 3px 2px;
+}
+
+/* TODO: I don't like this :( */
+@media (min-width: 1440px) {
+  .mwi-copy-section .mwi-conditional-space {
+    margin-top: 170px;
+  }
+}
+@media (max-width: 1439px) {
+  .mwi-copy-section .mwi-conditional-space {
+    margin-top: 65px;
+  }
+}
+
+/* MWI List */
+ul {
+  list-style-type: none;
+}
+@media (min-width: 1440px) {
+  ul {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+  }
+}
+@media (max-width: 1439px) {
+  ul {
+    display: flex;
+    flex-direction: column;
+    margin-left: 40px !important;
+  }
+}
+ul, li, li a {
+  margin: 0;
+  padding: 0; 
+  color: #858585;
+  height: 26px;
+  font-size: 18px;
+}
+li {
+  margin: 10px 0;
+}
+li a {
+  border-left: solid 2px #222222;
+  padding: 0 24px;
+  white-space: nowrap;
+}
+li a:hover {
+  color: #DEBF79;
+  border-left: solid 2px #f4f4f4
+}
+li {
+
+}
+/* END */
+
+.mwi-copy-section p {
+  font-size: 16px;
+  line-height: 25px;
+  margin-bottom: 14px;
+}
+/* Marketing Copy END */
+
+/* MWI Navigation: */
+.mwi-navigation {
+  /* padding:0 0 6px 0; */
+}
+.mwi-navigation a {
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 18px;
+}
+
+@media (max-width: 1439px) {
+  .mwi-navigation-expanded {
+    display: none;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mwi-navigation-condensed {
+    display: none;
+  }
+}
+/* MWI Navigation End. */
+
+/* MWI Card section: */
+.mwi-card-layout {
+  padding:10px;
+}
+@media (min-width: 1440px) {
+  .mwi-card-layout {
+    display: flex;
+    flex-direction: row;
+    column-gap: 20px;
+    align-items: center;
+  }
+}
+@media (max-width: 1439px) {
+  .mwi-card-layout {
+    display: flex;
+    flex-direction: column;
+    row-gap: 8px;
+    align-items: center;
+  }
+}
+/* MWI Card section END */
+
+/* MWI Card: */
+.mwi-card {
+  background-color: #FFFFFF !important;
+  border-radius: 3px;
+  padding: 0 50px 29px 50px;
+}
+@media (min-width: 1440px) {
+  .mwi-card {
+    min-width: 300px;
+    width:300px;
+    max-width: 300px;
+  }
+}
+@media (max-width: 1439px) {
+  .mwi-card {
+    width: 100%;
+    max-width: 300px;
+  }
+}
+
+.mwi-card-icon {
+  height: 158px;
+  width: 277px;
+  display:flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+.mwi-card h2,
+.mwi-light-content h2
+ {
+  font-size: 35px;
+  line-height: 41px;
+  letter-spacing: 0.5px;
+  font-weight: 700;
+  color: #000000;
+  white-space: nowrap;
+  margin-bottom: 21px;
+}
+.mwi-card h2 {
+  margin-left:11px;
+}
+.mwi-card p {
+  text-align: justify;
+  line-height: 25px; 
+  margin-left: 11px;
+  margin-bottom: 11px;
+}
+/* MWI Card: */
+
+/* MWI Form */
+.mwi-form {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  align-content: stretch;
+
+  background-color: #FFFFFF;
+  padding:0;
+  /* width:100%; */
+}
+@media (min-width: 1440px) {
+  .mwi-form {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+  }
+}
+@media (max-width: 1439px) {
+  .mwi-form {
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin: 0 35px 50px 35px;
+  }
+}
+
+@media (min-width: 1440px) {
+  .mwi-form h2 {
+    margin-top: 76px;
+    margin-bottom: 36px; 
+  }
+}
+@media (max-width: 1439px) {
+  .mwi-form h2 {
+    margin-top: 50px;
+    width: 100%;
+  }
+}
+
+.mwi-fields-container {
+  display: flex;
+  width:100%;
+  margin-bottom: 10px;
+}
+@media (min-width: 1440px) {
+  .mwi-fields-container {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 20px;
+    column-gap: 20px; 
+  }
+}
+@media (max-width: 1439px) {
+  .mwi-fields-container {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    row-gap: 20px;
+    justify-content: stretch;
+    justify-items: stretch;
+    align-items: stretch;
+  }
+}
+.mwi-form input, 
+.mwi-form textarea {
+  padding: 10px 20px;
+  color: #858585;
+  background-color: #f4f4f4;
+  border: none;
+}
+@media (min-width: 1440px) {
+  .mwi-form input {
+    min-width: 41%;
+  }
+  .mwi-form textarea { 
+    height: 116px;
+    width: 100%;
+  }
+} 
+@media (max-width: 1439px) {
+  .mwi-form input {
+    /* width: 100%; */
+  }
+  .mwi-form textarea { 
+    height: 225px;
+    /* width: 100%; */
+  }
+}
+/* MWI Form END */
+
+/* MWI Toolbar: */
+.mwi-toolbar {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  padding:10px;
+}
+.mwi-toolbar a, 
+.mwi-toolbar button,
+input[type=submit] { 
+  white-space: nowrap;
+  line-height: 21px;
+  font-weight: 500;
+  background-color: #DEBF79;
+  color: #FFFFFF;
+  padding: 12px 28px;
+  border: none;
+  cursor: pointer;
+}
+.mwi-toolbar button,
+input[type=submit] {
+  min-width: 130px;
+}
+/* MWI Toolbar END */
