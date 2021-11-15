@@ -2,13 +2,13 @@ import ContactForm from './components/ContactForm';
 
 export default function Home() {
     function contactFormHandler(contactFormData) {
-        fetch('https://tech-challenge-node-next-eglt2.ondigitalocean.app/contacts'),
+        fetch('http://143.198.166.162/contacts'),
         {
             method: 'POST',
             body: JSON.stringify(contactFormData),
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': 'https://tech-challenge-node-next-eglt2.ondigitalocean.app'
+                'Access-Control-Allow-Origin': 'http://143.198.166.162'
             }
         }
     };
