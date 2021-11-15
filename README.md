@@ -5,7 +5,7 @@ Hosted URL (GitHub Pages): <https://kshoultz.github.io/tech-challenge-basic/>
 Repository url: <https://github.com/kshoultz/tech-challenge-basic>
 
 Laravel Blade / Restful API :
-Hosted URL (Forge): <https://143.198.166.162>
+Hosted URL (Forge): <http://143.198.166.162>
 Repository url: <https://github.com/kshoultz/tech-challenge-laravel>
 
 Node.js / Next.js / Material UI Site:
