@@ -7,7 +7,8 @@ export default function Home() {
             method: 'POST',
             body: JSON.stringify(contactFormData),
             headers: {
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                'Access-Control-Allow-Origin': 'https://tech-challenge-node-next-eglt2.ondigitalocean.app'
             }
         }
     };
