@@ -2,13 +2,13 @@ import ContactForm from './components/ContactForm';
 
 export default function Home() {
     function contactFormHandler(contactFormData) {
-        fetch('http://143.198.166.162/contacts'),
+        fetch('http://137.184.134.2),
         {
             method: 'POST',
             body: JSON.stringify(contactFormData),
             headers: {
                 'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': 'http://143.198.166.162'
+                'Access-Control-Allow-Origin': 'http://137.184.134.2'
             }
         }
     };
