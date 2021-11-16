@@ -1,16 +1,20 @@
 import ContactForm from './components/ContactForm';
 
-export default function Home() {
+export default function Contact() {
     function contactFormHandler(contactFormData) {
-        fetch('https://mwi-challenge.com'),
-        {
-            method: 'POST',
-            body: JSON.stringify(contactFormData),
-            headers: {
-                'Content-Type': 'application/json',
-                'Access-Control-Allow-Origin': 'https://mwi-challenge.com'
-            }
-        }
+        // fetch('https://mwi-challenge.com/api/contacts'), {
+        //     method: 'POST',
+        //     body: JSON.stringify(contactFormData),
+        //     headers: {
+        //         'Content-Type': 'application/json',
+        //         'Access-Control-Allow-Origin': 'https://mwi-challenge.com'
+        //     }
+        // }
+
+        var xhr = new XMLHttpRequest();
+            xhr.open("POST", "https://mwi-challenge.com/contacts", true);
+            xhr.setRequestHeader('Content-Type', 'application/json');
+            xhr.send(JSON.stringify(contactFormData));
     };
 
     return (

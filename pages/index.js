@@ -8,9 +8,7 @@ export default function Home() {
 
   useEffect(() => {
     setIsLoading(true);
-    fetch (
-        'https://mwi-challenge.com/posts'
-    )
+    fetch ('https://mwi-challenge.com/api/posts')
       .then((response) => {
         return response.json();
       })
@@ -22,7 +20,7 @@ export default function Home() {
             key: key, 
             ...data[key]
           };
-          posts.push(key);
+          posts.push(post);
         }
 
         setIsLoading(false);
@@ -60,11 +58,11 @@ export default function Home() {
                 </header>
                 <div className="mwi-card-layout">
                   {
-                    posts.map((post) => (
+                    loadedPosts.map((post) => (
                       <Card 
                         key={post.id} 
                         id={post.id} 
-                        image={post.image_url}
+                        image={`/images/${post.image_url}`}
                         title={post.title}
                         paragraph={post.paragraph}
                       />
