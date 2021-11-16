@@ -1,4 +1,4 @@
-This site is intended to address the tech challenge in a next.js site.
+This site is intended to address the tech challenge in a node/next.js site.
 
 Basic HTML, CSS, JavaScript Site :
 Hosted URL (GitHub Pages): <https://kshoultz.github.io/tech-challenge-basic/>
