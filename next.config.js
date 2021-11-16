@@ -4,7 +4,7 @@ module.exports = {
       return [
         {
           source: '/api/:path*',
-          destination: 'http://143.198.166.162/:path*',
+          destination: 'https://mwi-challenge.com/:path*',
         },
       ]
     },

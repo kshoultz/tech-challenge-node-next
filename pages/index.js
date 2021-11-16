@@ -9,7 +9,7 @@ export default function Home() {
   useEffect(() => {
     setIsLoading(true);
     fetch (
-        'https://tech-challenge-node-next-eglt2.ondigitalocean.app//posts'
+        'https://mwi-challenge.com/posts'
     )
       .then((response) => {
         return response.json();
