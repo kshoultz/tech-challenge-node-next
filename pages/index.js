@@ -3,11 +3,15 @@ import {Helmet} from "react-helmet";
 import {useState, useEffect} from 'react';
 
 export default function Home() {
-  const [isLoading, setIsLoading] = useState(true);
+  const [isLoading1, setIsLoading1] = useState(true);
   const [loadedPosts, setLoadedPosts] = useState([]);
 
+  const [isLoading2, setIsLoading2] = useState(true);
+  const [pageTitle1, setPageTitle1] = useState([]);
+  const [pageTitle2, setPageTitle2] = useState([]);
+
   useEffect(() => {
-    setIsLoading(true);
+    setIsLoading1(true);
     fetch ('https://mwi-challenge.com/api/posts')
       .then((response) => {
         return response.json();
@@ -23,13 +27,33 @@ export default function Home() {
           posts.push(post);
         }
 
-        setIsLoading(false);
+        setIsLoading1(false);
         setLoadedPosts(posts);
       });
   }, [ ]);
 
+  useEffect(() => {
+      setIsLoading2(true);
+      fetch ('https://api.mwi.dev/content/home')
+      .then((response) => {
+          return response.json();
+      })
+      .then((json) => {
+          let random = Math.floor(Math.random() * 3),
+            title = json.data[random].title.split(' '),
+              title1 = title[0];
+              
+          title.shift();
 
-  if (isLoading) {
+          setIsLoading2(false);
+          setPageTitle1(title1);
+          setPageTitle2(title.join(' '));
+          // setPageContent(json.data[0].content);
+      });
+  }, [ ]);
+
+
+  if (isLoading1 || isLoading2) {
     return (
       <section>
         <p>Loading...</p>
@@ -70,7 +94,7 @@ export default function Home() {
                   }
                 </div>
                 <div className="mwi-copy-section">
-                    <h1><span className="mwi-underline">Heading</span> One</h1>
+                    <h1><span className="mwi-underline">{pageTitle1}</span> {pageTitle2}</h1>
                         <p>
                             Remove the duplicates in 2 Javascript objects and output the list of distinct names in an unordered list when <a href="#mwi-bottom" onClick={handleMWIClick}>this link</a> is clicked. 
                         </p>
