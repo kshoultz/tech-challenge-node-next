@@ -72,7 +72,7 @@ export default function Contact() {
                             <a href="/">home</a>
                         </div>
                     </header>
-                    <ContactForm onAddContact={contactFormHandler} />
+                    <ContactForm onAddContact={contactFormHandler} formTitle={formTitle} />
                 </div>
             </div>
         </div>

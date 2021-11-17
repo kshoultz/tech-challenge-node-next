@@ -28,7 +28,7 @@ function ContactForm(props) {
         }
     return (
         <form className="mwi-form" onSubmit={submitHandler} >
-            <h2>Heading Two</h2>
+            <h2>{props.formTitle}</h2>
             <div className="mwi-fields-container">
                 <input placeholder="First Name" name="first_name" ref={firstNameInputRef} />
                 <input placeholder="Last Name" name="last_name" ref={lastNameInputRef} />
