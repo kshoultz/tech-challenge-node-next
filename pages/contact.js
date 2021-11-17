@@ -24,8 +24,9 @@ export default function Contact() {
         })
         .then((json) => {
             let title = json.data[0].title.split(' '),
-                title1 = title[0],
-                title2 = title.shift();
+                title1 = title[0];
+                
+            title.shift();
 
             setIsLoading(false);
             setPageTitle1(title1);
